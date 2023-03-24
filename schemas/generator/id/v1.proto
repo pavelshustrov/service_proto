@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+option go_package = "v1/;generator";
+
+message ID {
+  string UUID = 1;
+}
+
+service Generator {
+  rpc NewID(google.protobuf.Empty) returns(ID);
+}
